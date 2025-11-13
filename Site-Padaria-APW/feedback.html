@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Riba City</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+
+    <!-- Ícone -->
+    <link rel="shortcut icon" href="img/Logo-da-Padaria.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Cabeçalho/nav bar -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/imagem-da-Padaria.png" alt="Ícone da Padaria Riba City">
+            <span class="main-title">Padaria Riba City</span>
+        </a>
+        <nav>
+            <button class="hamburger-menu" id="hamburger-btn" aria-label="Abrir menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+    
+            <!-- Dê um ID à sua lista de navegação para o JavaScript encontrá-la -->
+            <ul id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="carrinho.html">🛒 Carrinho</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="conta.html">Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção onde fica o formulário -->
+    <main>
+        <div class="form-container">
+            <div class="form-header">
+                <a href="index.html" class="button font-button" id="voltar-btn">Voltar</a>
+                <h2 class="main-title" id="form-title">Feedback</h2>
+            </div>
+
+            <div class="form">
+                <form action="https://formsubmit.co/rafita.limagames2@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="usuario_nome" required placeholder="Seu nome*">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="usuario_email" required placeholder="E-mail*">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Sua Mensagem:</label>
+                        <textarea id="mensagem" name="usuario_mensagem" rows="6" required placeholder="Digite a sua mensagem aqui*"></textarea>
+                    </div>
+                    <button type="submit" class="button font-button">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (pode adicionar outros links) -->
+    <footer>
+        <p class="font-general">&copy; 2025 Padaria Riba City. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
